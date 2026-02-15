@@ -1,9 +1,13 @@
 import { Button } from '@/components/ui/button'
+import { useAuth } from '@/context/AuthContext'
+import { useCartContext } from '@/context/CartContext'
 import { Feather } from 'lucide-react'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
 const Navbar = () => {
+    const { cart } = useCartContext();
+    const { user, logoutUser } = useAuth();
     return (
         <div className='flex justify-between items-center px-12 py-4 border border-b-gray-200'>
             <div className='flex justify-between items-center gap-3 m-2 text-lg font-semibold text-green-500'>
@@ -19,8 +23,16 @@ const Navbar = () => {
                 </div>
             </div>
             <div className='flex justify-between items-center gap-4'>
-                <Link to='/checkout'><Button>checkout</Button></Link>
-                <Link to='/auth'><Button>Login</Button></Link>
+
+                {user ? (
+                    <>
+                        <span>{user.name || user.email}</span>
+                        <Link to='/auth'><Button className='bg-red-500' onClick={() => logoutUser()}>Logout</Button></Link>
+                    </>
+                ) : (
+                    <Link to='/auth'><Button className='bg-green-500'>Login</Button></Link>
+                )}
+                <Link to='/checkout'><Button>Cart ({cart.length})</Button></Link>
             </div>
         </div>
     )

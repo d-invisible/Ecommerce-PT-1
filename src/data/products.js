@@ -5,6 +5,7 @@ const products = [
         price: 100,
         description: "Description of Product 1",
         image: "https://picsum.photos/id/1/200",
+        inCart: false,
     },
     {
         id: 2,
@@ -12,6 +13,7 @@ const products = [
         price: 200,
         description: "Description of Product 2",
         image: "https://picsum.photos/id/2/200",
+        inCart: false,
     },
     {
         id: 3,
@@ -19,6 +21,7 @@ const products = [
         price: 300,
         description: "Description of Product 3",
         image: "https://picsum.photos/id/3/200",
+        inCart: false,
     },
     {
         id: 4,
@@ -26,6 +29,7 @@ const products = [
         price: 400,
         description: "Description of Product 4",
         image: "https://picsum.photos/id/4/200",
+        inCart: false,
     },
     {
         id: 5,
@@ -33,6 +37,7 @@ const products = [
         price: 500,
         description: "Description of Product 5",
         image: "https://picsum.photos/id/5/200",
+        inCart: false,
     },
     {
         id: 6,
@@ -40,6 +45,7 @@ const products = [
         price: 600,
         description: "Description of Product 6",
         image: "https://picsum.photos/id/6/200",
+        inCart: false,
     },
     {
         id: 7,
@@ -47,6 +53,7 @@ const products = [
         price: 700,
         description: "Description of Product 7",
         image: "https://picsum.photos/id/7/200",
+        inCart: false,
     },
     {
         id: 8,
@@ -54,6 +61,7 @@ const products = [
         price: 800,
         description: "Description of Product 8",
         image: "https://picsum.photos/id/8/200",
+        inCart: false,
     },
     {
         id: 9,
@@ -61,6 +69,7 @@ const products = [
         price: 900,
         description: "Description of Product 9",
         image: "https://picsum.photos/id/9/200",
+        inCart: false,
     },
     {
         id: 10,
@@ -68,6 +77,7 @@ const products = [
         price: 1000,
         description: "Description of Product 10",
         image: "https://picsum.photos/id/10/200",
+        inCart: true,
     },
 ]
 
